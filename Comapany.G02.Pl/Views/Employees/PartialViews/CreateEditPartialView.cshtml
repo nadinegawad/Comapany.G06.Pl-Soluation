@@ -1,0 +1,61 @@
+﻿@model EmployeeViewModel;
+@{
+    var departments = new SelectList(@ViewBag.Departments, "Id", "Name");
+}
+<div class="form-control">
+    <label asp-for="Name" class="col-form-label">Name</label>
+    <input asp-for="Name" type="text" class="form-control" />
+    <span asp-validation-for="Name"></span>
+</div>
+<div class="form-control">
+    <label asp-for="Age" class="col-form-label">Age</label>
+    <input asp-for="Age" type="text" class="form-control" />
+    <span asp-validation-for="Age"></span>
+
+    <div class="form-control">
+        <label asp-for="Address" class="col-form-label">Address</label>
+        <input asp-for="Address" type="text" class="form-control" />
+        <span asp-validation-for="Address"></span>
+    </div>
+    <div class="form-control">
+        <label asp-for="Email" class="col-form-label">Email</label>
+        <input asp-for="Email" type="text" class="form-control" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div class="form-control">
+        <label asp-for="PhoneNumber" class="col-form-label">Phone Number</label>
+        <input asp-for="PhoneNumber" type="text" class="form-control" />
+        <span asp-validation-for="PhoneNumber"></span>
+    </div>
+    <div class="form-control">
+        <label asp-for="Salary" class="col-form-label">Salary</label>
+        <input asp-for="Salary" type="number" class="form-control" />
+        <span asp-validation-for="Salary"></span>
+    </div>
+    <div class="form-control">
+        <label for="salary" class="col-form-label">Department</label>
+        <select asp-for="DepartmentId" asp-items="@departments">
+            <option value="@null">
+                ---------select department---------
+            </option>
+        </select>
+        
+    </div>
+    <div class="form-control">
+        <label asp-for="IsActive" class="form-check">IsActive</label>
+        <input asp-for="IsActive" type="text" class="form-check" />
+        <span asp-validation-for="IsActive"></span>
+    </div>
+    <div class="form-control">
+        <label asp-for="HiringDate" class="col-form-label">Hiring Date</label>
+        <input asp-for="HiringDate" type="text" class="form-control" />
+        <span asp-validation-for="HiringDate"></span>
+    </div>
+     <div class="form-control">
+        <label asp-for="Image" class="col-form-label"></label>
+        <input asp-for="Image" type="file" class="form-control" />
+       
+    </div>
+
+    <br />
+    <br />
